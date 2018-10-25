@@ -1,5 +1,5 @@
  private Boolean start = false;
- private Star[] stars =  new Star[Star.starCount];
+ private Star[] stars =  new Star[Star.getstarCount()];
 
  public void setup() {
   size(500, 600);
