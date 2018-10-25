@@ -1,11 +1,11 @@
  private Boolean start = false;
- private Star[] stars = new Star[Star.starCount];
+ private Star[] stars =  new Star[Star.starCount];
 
  public void setup() {
   size(500, 600);
   ScreenSizeChecker();
   ellipseMode(CENTER);
-  for (int i=0;i<star.length;i++){
+  for (int i=0;i<stars.length;i++){
   createStars(i);
   }
 } //End of setup()
@@ -23,7 +23,7 @@
   } //End of startStop
 } //End draw()
 public void mouseClicked() {
-  for(int i = 0 ; i <star.length; i++){
+  for(int i = 0 ; i <stars.length; i++){
   createStars(i);
   }
 }
