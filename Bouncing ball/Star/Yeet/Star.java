@@ -18,6 +18,9 @@ class Star {
   public float getY() {
     return y;
   }
+   public int getDiameter() {
+    return diameter;
+  }
   public float getRadius() {
     return radius;
   }
