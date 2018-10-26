@@ -1,4 +1,4 @@
-class Ball {
+class Star {
   private float x;
   private float y;
   private float radius;
