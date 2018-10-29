@@ -1,6 +1,6 @@
 
 private Boolean start = false;
-private Ball[] stars =  new Ball[Ball.getstarCount()];
+private  Ball[] stars =  new Ball[Ball.getstarCount()];
 public void setup() {
   size(500, 501);
   ellipseMode(CENTER);

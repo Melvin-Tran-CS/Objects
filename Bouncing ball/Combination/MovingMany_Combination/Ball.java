@@ -1,4 +1,4 @@
-class Ball {
+class  Ball {
   private int x = 250;
   private int y = 250;
   private int diameter;
@@ -35,10 +35,10 @@ class Ball {
       y--;
     }
   }
-  public int getX() { 
+  public  int getX() { 
     return x;
   }
-  public int getY() {
+  public  int getY() {
     return y;
   }
   public int getDiameter() {
