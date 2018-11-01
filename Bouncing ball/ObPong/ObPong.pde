@@ -13,14 +13,10 @@ int [] score = {0, 0}; //Player score 1 & 2
 // End Global Variables
 //This File is the main file
 //It calls each Procedure in either setup() or draw()
-private Ball[] stars =  new Star[Ball.getstarCount()];
 void setup() {
   size(500, 600);
   gameStart(); //arithemetic to calcaulte starting positions of paddles and ball
   screenSizeChecker();
-  for (int i=0;i<stars.length;i++){
-  createBalls();
-  }
 }
 
 void draw() {
@@ -33,8 +29,5 @@ startStop();
     playGame(); //Also contains "ball squish" procedure, with change in frameRate
     // Also contains highlihgts for positive user feedback
     score(); //contains highlihgts for positive user feedback
-    for(int i = 0; i < stars.length;i++){
-    ellipse(stars[i].getX(), stars[i].getY(), stars[i].getRadius(), stars[i].getRadius());
-  }
   }
 }

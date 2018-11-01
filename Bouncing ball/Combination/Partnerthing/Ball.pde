@@ -5,14 +5,18 @@ class Ball {
   color colour;
   float xSpeed;
   float ySpeed;
+  float ballStartX;
+  float ballStartY;
 
-  Ball(float x, float y, color myColour) {
+public Ball(float x, float y, color myColour) {
     this.x = x;
     this.y = y;
     diameter = 20;
     colour = myColour;
     xSpeed = 1;
     ySpeed = 1;
+    ballStartX = width/2;
+    ballStartY = height/2;
   }
 
   void step() {
