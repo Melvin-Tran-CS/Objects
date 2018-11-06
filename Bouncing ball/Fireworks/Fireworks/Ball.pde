@@ -6,7 +6,7 @@ class Ball {
   float gravity;
   float xSpeed;
   float ySpeed;
-   int ballNumber = 10;
+   int ballNumber = 50;
   
   
   public Ball(float width,float height){
@@ -37,7 +37,7 @@ class Ball {
   ySpeed += gravity;
   }
   void draw() {
-    background(0);
+    
   fill(c);
   ellipse(x,y,diameter,diameter);
   }
