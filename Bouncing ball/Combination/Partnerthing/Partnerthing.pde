@@ -1,5 +1,6 @@
-Ball myBall = new Ball(50,100,50,color(0,255,0));
-Ball yourBall = new Ball(50,75,50,color(0,150,0));
+Boolean start = false;
+Ball myBall = new Ball(250,300);
+Ball yourBall = new Ball(250,320);
 int paddleWidthRatio; 
 int paddleHeightRatio = 10;
 int [] paddle = {0, 0}; //Paddle width and height
@@ -9,17 +10,21 @@ int [] score = {0, 0}; //Player score 1 & 2
 void setup() {
   size(500, 600);
   ScreenSizeChecker();
-  println("Exiting,not exiting");
+  
   //exit();
 }
 void draw() {
-  fill(myBall.colour);
-  fill(yourBall.coloor);
+  startStop();
+  if (start == true){
   background(0);
   score();
   myBall.step();
   yourBall.step();
-  
+  fill(myBall.colour);
   ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
+  
+  fill(yourBall.coloor);
   ellipse(yourBall.x,yourBall.y,yourBall.diameter,yourBall.diameter);
+  }
+
 }

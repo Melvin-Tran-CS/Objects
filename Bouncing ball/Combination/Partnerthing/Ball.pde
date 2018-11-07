@@ -6,22 +6,21 @@ class Ball {
   color coloor;
   float xSpeed;
   float ySpeed;
-  float ballStartX;
-  float ballStartY;
+  int ballStartX = 250;
+  int ballStartY = 300;
 
-public Ball(float x, float y, color myColour,color yourColour) {
+public Ball(float x, float y) {
     this.x = x;
     this.y = y;
     diameter = 20;
-    colour = myColour;
-    coloor = yourColour;
+    colour = #BEE5F7;
+    coloor = #DFE327;
     xSpeed = 1;
     ySpeed = 1;
-    ballStartX = width/2;
-    ballStartY = height/2;
   }
 
   void step() {
+    
     x += xSpeed;
     y += ySpeed;
 
@@ -33,4 +32,7 @@ public Ball(float x, float y, color myColour,color yourColour) {
     }
     
   }
-}
+  
+ 
+  }
+  
