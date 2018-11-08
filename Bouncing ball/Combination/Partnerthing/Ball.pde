@@ -1,7 +1,7 @@
 class Ball {
   float x ;
   float y ;
-  float diameter ;
+  int diameter ;
   color colour;
   color coloor;
   float xSpeed;

@@ -1,4 +1,5 @@
 Boolean start = false;
+Boolean paddleReset = false;
 Ball myBall = new Ball(250,300);
 Ball yourBall = new Ball(250,320);
 int paddleWidthRatio; 
@@ -20,6 +21,7 @@ void draw() {
   score();
   myBall.step();
   yourBall.step();
+
   fill(myBall.colour);
   ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
   
