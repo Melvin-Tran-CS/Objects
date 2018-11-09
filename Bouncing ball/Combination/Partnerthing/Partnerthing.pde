@@ -2,6 +2,7 @@ Boolean start = false;
 Boolean paddleReset = false;
 Ball myBall = new Ball(250,300);
 Ball yourBall = new Ball(250,320);
+LeftPaddle leftPaddle = new LeftPaddle();
 int paddleWidthRatio; 
 int paddleHeightRatio = 10;
 int [] paddle = {0, 0}; //Paddle width and height
@@ -18,8 +19,13 @@ void draw() {
   startStop();
   if (start == true){
   background(0);
-  score();
+  
+  leftPaddle.leftMove();
+  fill(leftPaddle.leftColor);
+  rect(leftPaddle.paddleStartX,leftPaddle.paddleStartY,leftPaddle.paddleWidth,leftPaddle.paddleHeight);
+  
   myBall.step();
+
   yourBall.step();
 
   fill(myBall.colour);
@@ -28,5 +34,5 @@ void draw() {
   fill(yourBall.coloor);
   ellipse(yourBall.x,yourBall.y,yourBall.diameter,yourBall.diameter);
   }
-
+println("ballX" + yourBall.x, "paddley" + leftPaddle.paddleY);
 }

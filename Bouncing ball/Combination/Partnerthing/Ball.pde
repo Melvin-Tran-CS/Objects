@@ -5,6 +5,8 @@ class Ball {
   color colour;
   color coloor;
   float xSpeed;
+  float xxSpeed;
+  float yySpeed;
   float ySpeed;
   int ballStartX = 250;
   int ballStartY = 300;
@@ -23,6 +25,7 @@ public Ball(float x, float y) {
     
     x += xSpeed;
     y += ySpeed;
+    
 
     if (x+xSpeed < 0 || x+xSpeed > width) {
       xSpeed *= -1;
