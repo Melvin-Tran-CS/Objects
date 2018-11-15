@@ -1,8 +1,9 @@
 Boolean start = false;
 Boolean paddleReset = false;
-Ball myBall = new Ball(250,300);
-Ball yourBall = new Ball(250,320);
+Ball myBall = new Ball(250, 300);
+Ball yourBall = new Ball(250, 320);
 LeftPaddle leftPaddle = new LeftPaddle();
+RightPaddle rightPaddle = new RightPaddle();
 int paddleWidthRatio; 
 int paddleHeightRatio = 10;
 int [] paddle = {0, 0}; //Paddle width and height
@@ -12,27 +13,32 @@ int [] score = {0, 0}; //Player score 1 & 2
 void setup() {
   size(500, 600);
   ScreenSizeChecker();
-  
+
   //exit();
 }
 void draw() {
   startStop();
-  if (start == true){
-  background(0);
-  
-  leftPaddle.leftMove();
-  fill(leftPaddle.leftColor);
-  rect(leftPaddle.paddleStartX,leftPaddle.paddleStartY,leftPaddle.paddleWidth,leftPaddle.paddleHeight);
-  
-  myBall.step();
+  if (start == true) {
+    background(0);
 
-  yourBall.step();
+    leftPaddle.leftMove();
+    fill(leftPaddle.leftColor);
+    rectMode(CENTER);
+    rect(leftPaddle.paddleStartX, leftPaddle.paddleStartY, leftPaddle.paddleWidth, leftPaddle.paddleHeight);
 
-  fill(myBall.colour);
-  ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
-  
-  fill(yourBall.coloor);
-  ellipse(yourBall.x,yourBall.y,yourBall.diameter,yourBall.diameter);
+    rightPaddle.rightMove();
+    fill(rightPaddle.rightColor);
+    rectMode(CENTER);
+    rect(rightPaddle.rightPaddleStartX, rightPaddle.rightPaddleStartY, rightPaddle.rightPaddleWidth, rightPaddle.rightPaddleHeight);
+
+    myBall.step();
+
+    yourBall.step();
+
+    fill(myBall.colour);
+    ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
+
+    fill(yourBall.coloor);
+    ellipse(yourBall.x, yourBall.y, yourBall.diameter, yourBall.diameter);
   }
-println("ballX" + yourBall.x, "paddley" + leftPaddle.paddleY);
 }

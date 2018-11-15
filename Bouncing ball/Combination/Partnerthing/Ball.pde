@@ -11,7 +11,7 @@ class Ball {
   int ballStartX = 250;
   int ballStartY = 300;
 
-public Ball(float x, float y) {
+  public Ball(float x, float y) {
     this.x = x;
     this.y = y;
     diameter = 20;
@@ -22,10 +22,10 @@ public Ball(float x, float y) {
   }
 
   void step() {
-    
+
     x += xSpeed;
     y += ySpeed;
-    
+
 
     if (x+xSpeed < 0 || x+xSpeed > width) {
       xSpeed *= -1;
@@ -33,9 +33,5 @@ public Ball(float x, float y) {
     if (y+ySpeed < 0 || y+ySpeed > height) {
       ySpeed *= -1;
     }
-    
   }
-  
- 
-  }
-  
+}
