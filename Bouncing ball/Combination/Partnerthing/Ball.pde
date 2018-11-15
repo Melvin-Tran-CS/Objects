@@ -5,8 +5,6 @@ class Ball {
   color colour;
   color coloor;
   float xSpeed;
-  float xxSpeed;
-  float yySpeed;
   float ySpeed;
   int ballStartX = 250;
   int ballStartY = 300;
@@ -34,4 +32,35 @@ class Ball {
       ySpeed *= -1;
     }
   }
+  void score()  {
+  
+  if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
+    if (x == 0+(diameter/2)) { //Player 2 Score
+      score[1] += 1;
+    }
+    if (x == width-(diameter/2)) { //Player 1 Score
+      score[0] += 1;
+    }
+    x = ballStartX;
+    y = ballStartY;
+    
+  }
+  
+}
+void score2()  {
+  
+  if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
+    if (x == 0+(diameter/2)) { //Player 2 Score
+      score[1] += 1;
+    }
+    if (x == width-(diameter/2)) { //Player 1 Score
+      score[0] += 1;
+    }
+    x = ballStartX;
+    y = ballStartY+20;
+    
+  }
+  
+}
+
 }
