@@ -1,6 +1,7 @@
 class Ball {
   float x ;
   float y ;
+  float r;
   int diameter ;
   color colour;
   color coloor;
@@ -17,13 +18,15 @@ class Ball {
     coloor = #DFE327;
     xSpeed = 1;
     ySpeed = 1;
+   
   }
 
   void step() {
+    for(int x = ballStartX;;){
+    }
 
     x += xSpeed;
     y += ySpeed;
-
 
     if (x+xSpeed < 0 || x+xSpeed > width) {
       xSpeed *= -1;
@@ -32,35 +35,35 @@ class Ball {
       ySpeed *= -1;
     }
   }
-  void score()  {
-  
-  if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
-    if (x == 0+(diameter/2)) { //Player 2 Score
-      score[1] += 1;
-    }
-    if (x == width-(diameter/2)) { //Player 1 Score
-      score[0] += 1;
-    }
-    x = ballStartX;
-    y = ballStartY;
-    
-  }
-  
-}
-void score2()  {
-  
-  if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
-    if (x == 0+(diameter/2)) { //Player 2 Score
-      score[1] += 1;
-    }
-    if (x == width-(diameter/2)) { //Player 1 Score
-      score[0] += 1;
-    }
-    x = ballStartX;
-    y = ballStartY+20;
-    
-  }
-  
-}
+  void score() {
 
+    if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
+      if (x == 0+(diameter/2)) { //Player 2 Score
+        score[1] += 1;
+      }
+      if (x == width-(diameter/2)) { //Player 1 Score
+        score[0] += 1;
+      }
+      x = ballStartX;
+      y = ballStartY;
+    }
+  }
+  void score2() {
+    
+
+    if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
+      if (x == 0+(diameter/2)) { //Player 2 Score
+        score[1] += 1;
+      }
+      if (x == width-(diameter/2)) { //Player 1 Score
+        score[0] += 1;
+      }
+      x = ballStartX;
+      y = ballStartY+20;
+      if (x == ballStartX && r == 1){
+      xSpeed -= 1;
+      }
+    }
+    println(r);
+  }
 }
