@@ -1,7 +1,7 @@
 class Ball {
   float x ;
   float y ;
-  float r;
+  
   int diameter ;
   color colour;
   color coloor;
@@ -22,8 +22,7 @@ class Ball {
   }
 
   void step() {
-    for(int x = ballStartX;;){
-    }
+    
 
     x += xSpeed;
     y += ySpeed;
@@ -35,7 +34,7 @@ class Ball {
       ySpeed *= -1;
     }
   }
-  void score() {
+  public void score() {
 
     if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
       if (x == 0+(diameter/2)) { //Player 2 Score
@@ -46,6 +45,9 @@ class Ball {
       }
       x = ballStartX;
       y = ballStartY;
+      if (x == ballStartX && r < 1){
+      xSpeed *= -1;
+      }
     }
   }
   void score2() {
@@ -60,9 +62,10 @@ class Ball {
       }
       x = ballStartX;
       y = ballStartY+20;
-      if (x == ballStartX && r == 1){
-      xSpeed -= 1;
+      if (x == ballStartX && r < 1){
+      xSpeed *= -1;
       }
+      
     }
     println(r);
   }

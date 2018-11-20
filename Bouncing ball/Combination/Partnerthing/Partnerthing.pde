@@ -1,5 +1,7 @@
 Boolean start = false;
 Boolean paddleReset = false;
+float r;
+int i;
 Ball myBall = new Ball(250, 300);
 Ball yourBall = new Ball(250, 320);
 LeftPaddle leftPaddle = new LeftPaddle();
@@ -30,12 +32,15 @@ void draw() {
     fill(rightPaddle.rightColor);
     rectMode(CENTER);
     rect(rightPaddle.rightPaddleStartX, rightPaddle.rightPaddleStartY, rightPaddle.rightPaddleWidth, rightPaddle.rightPaddleHeight);
-    
+    for (int i = 2;i < 2; i++){
+      float r = random(0,2);
+    }
     myBall.score();
     myBall.step();
+    
     yourBall.score2();
     yourBall.step();
-
+    
     fill(myBall.colour);
     ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
 
