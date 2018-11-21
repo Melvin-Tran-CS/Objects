@@ -1,10 +1,10 @@
 Boolean start = false;
 Boolean paddleReset = false;
 float r;
-int i;
+
 Ball myBall = new Ball(250, 300);
 Ball yourBall = new Ball(250, 320);
-LeftPaddle leftPaddle = new LeftPaddle();
+LeftPaddle leftPaddle = new LeftPaddle(20,20);
 RightPaddle rightPaddle = new RightPaddle();
 /*int paddleWidthRatio; 
 int paddleHeightRatio = 10;
@@ -21,6 +21,7 @@ void setup() {
 void draw() {
   startStop();
   if (start == true) {
+    
     background(0);
 
     leftPaddle.leftMove();
@@ -32,9 +33,9 @@ void draw() {
     fill(rightPaddle.rightColor);
     rectMode(CENTER);
     rect(rightPaddle.rightPaddleStartX, rightPaddle.rightPaddleStartY, rightPaddle.rightPaddleWidth, rightPaddle.rightPaddleHeight);
-    for (int i = 2;i < 2; i++){
-      float r = random(0,2);
-    }
+    /*for (int i = 2;i >= 2;){
+      float r = random(-1,1);
+    }*/
     myBall.score();
     myBall.step();
     

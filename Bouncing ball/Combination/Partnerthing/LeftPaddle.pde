@@ -1,17 +1,22 @@
 class LeftPaddle {
   float paddleX;
   float paddleY;
+  int paddleUpArea;
+  int paddleDownArea;
+  int paddleWholeArea;
   final int paddleHeight;
   final int paddleWidth;
   int paddleStartX = 20 ;
   int paddleStartY = 300;
   color leftColor;
 
-  public LeftPaddle() {
+  public LeftPaddle( int paddleDownArea , int paddleUpArea) {
     paddleX = paddleStartX;
     paddleY = paddleStartY;
     paddleHeight = 40;
     paddleWidth = 10;
+    paddleUpArea = 20;
+    paddleDownArea = -20;
     leftColor = #15EA2C;
   }
   void leftMove() {
@@ -30,5 +35,7 @@ class LeftPaddle {
         paddleStartY += -5;
       }
     }
-  }
+    
+  
+}
 }

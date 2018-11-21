@@ -3,6 +3,7 @@ class RightPaddle {
   float rightPaddleY;
   final int rightPaddleHeight;
   final int rightPaddleWidth;
+  int rightPaddleUp;
   int rightPaddleStartX = 480 ;
   int rightPaddleStartY = 300;
   color rightColor;
@@ -12,6 +13,7 @@ class RightPaddle {
     rightPaddleY = rightPaddleStartY;
     rightPaddleHeight = 40;
     rightPaddleWidth = 10;
+    rightPaddleUp = 20;
     rightColor = #1DE0DB;
   }
   void rightMove() {

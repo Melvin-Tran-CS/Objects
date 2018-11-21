@@ -27,14 +27,15 @@ class Ball {
     x += xSpeed;
     y += ySpeed;
 
-    if (x+xSpeed < 0 || x+xSpeed > width) {
+    if (leftPaddle.paddleX + leftPaddle.paddleUpArea == x || rightPaddle.rightPaddleX + rightPaddle.rightPaddleUp == x) {
       xSpeed *= -1;
     }
     if (y+ySpeed < 0 || y+ySpeed > height) {
       ySpeed *= -1;
     }
+    
   }
-  public void score() {
+   void score() {
 
     if (x == 0+(diameter/2) || x == width-(diameter/2)) { //Score for Player 2, note the index
       if (x == 0+(diameter/2)) { //Player 2 Score
@@ -48,6 +49,7 @@ class Ball {
       if (x == ballStartX && r < 1){
       xSpeed *= -1;
       }
+      
     }
   }
   void score2() {
