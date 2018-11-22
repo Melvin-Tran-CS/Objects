@@ -27,7 +27,7 @@ class Ball {
     x += xSpeed;
     y += ySpeed;
 
-    if (leftPaddle.paddleX + leftPaddle.paddleUpArea == x || rightPaddle.rightPaddleX + rightPaddle.rightPaddleUp == x) {
+    if (x+xSpeed <0 || x+xSpeed > width) {
       xSpeed *= -1;
     }
     if (y+ySpeed < 0 || y+ySpeed > height) {
@@ -69,6 +69,6 @@ class Ball {
       }
       
     }
-    println(r);
+    println(leftPaddle.paddleX);
   }
 }
