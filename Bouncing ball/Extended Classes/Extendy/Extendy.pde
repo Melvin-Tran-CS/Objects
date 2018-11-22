@@ -1,7 +1,7 @@
 Boolean start = false;
 Boolean paddleReset = false;
 float r;
-
+PImage retard;
 Ball myBall = new Ball(250, 300);
 Ball yourBall = new Ball(250, 320);
 LeftPaddle leftPaddle = new LeftPaddle(20,20);
@@ -14,6 +14,8 @@ int [] player = new int [4]; //Alternate way of initializing an Array, for paddl
 int [] score = {0, 0}; //Player score 1 & 2
 void setup() {
   size(500, 600);
+  retard = loadImage("zucc.jpg");
+  retard.resize(500,600);
   ScreenSizeChecker();
 
   //exit();
@@ -22,7 +24,7 @@ void draw() {
   startStop();
   if (start == true) {
     
-    background(0);
+    background(retard);
 
     leftPaddle.leftMove();
     fill(leftPaddle.leftColor);
