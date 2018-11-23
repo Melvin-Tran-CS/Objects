@@ -1,5 +1,6 @@
 PImage yeet;
 ArrayList<Shape> shapes = new ArrayList<Shape>();
+Circle circle;
 void setup() {
   size(500, 500);
   yeet = loadImage("Kitchen_gun.png");
@@ -17,7 +18,11 @@ void draw() {
   background(yeet); //hes white which means white background
   for(int i = 0; i < shapes.size();i++){
   shapes.get(i).draw();
+  shapes.get(i).step();
 }
+  
+
+
 }
 abstract class Shape {
   float x;
@@ -28,4 +33,5 @@ abstract class Shape {
     this.y = y;
   }
   abstract void draw();
+ abstract void step();
 }
