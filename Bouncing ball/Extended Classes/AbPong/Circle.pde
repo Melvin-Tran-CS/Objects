@@ -1,19 +1,17 @@
 class Circle extends Shape {
-  float height;
-  float width;
-  float radius;
-  float xSpeed;
-  float ySpeed;
-  color c;
+  private float radius;
+  private float xSpeed;
+  private float ySpeed;
+ private color c;
 
-  Circle(float x, float y, float radius, color c) {
+  private Circle(float x, float y, float radius, color c) {
     super(x, y);
     this.radius = radius;
     this.c = c;
     xSpeed = 1;
     ySpeed = 1;
   }
-  void draw() {
+  public void draw() {
     fill(c);
     ellipse(x, y, radius, radius);
   }
@@ -26,7 +24,7 @@ class Circle extends Shape {
     if (x < 0) {
       xSpeed *= -1;
     }
-    if(y > 500){
+    if(y > 600){
     ySpeed *= -1;
     }
     if (y < 0){
