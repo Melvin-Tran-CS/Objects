@@ -1,6 +1,14 @@
 PImage yeet;
 private ArrayList<Shape> shapes = new ArrayList<Shape>();
 Circle circle;
+
+Shape triangle = new Shape(50,75) {
+void draw() {
+fill (random(255),random(255),random(255));
+triangle (x,y,x+10,y+10,x+10,y+10);
+}
+};
+
 public void setup() {
   size(500, 600);
   yeet = loadImage("Kitchen_gun.png");
@@ -13,6 +21,7 @@ public void setup() {
   shapes.add(rRGB);
   shapes.add(sircle);
   shapes.add(circle);
+  shapes.add(triangle);
 }
 public void draw() {
   background(yeet); //hes white which means white background
