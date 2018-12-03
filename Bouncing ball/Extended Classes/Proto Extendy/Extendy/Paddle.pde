@@ -1,4 +1,3 @@
-
 class Paddle extends Shape {
   private float width;
   private float height;
