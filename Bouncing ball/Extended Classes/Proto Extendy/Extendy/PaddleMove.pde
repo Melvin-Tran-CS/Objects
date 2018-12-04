@@ -1,8 +1,8 @@
 void PaddleMove() {
-  if (key == 'w') {
+  if (key == 'w' && paddle.y > 100) {
     paddle.stepUp();
   }
-  if (key == 's' ) {
+  if (key == 's' && paddle.y < 900) {
     paddle.stepDown();
   }
   if (key == '8' && peddle.y > 100) {
