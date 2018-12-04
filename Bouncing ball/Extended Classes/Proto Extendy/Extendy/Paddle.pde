@@ -14,12 +14,14 @@ class Paddle extends Shape {
     fill(c);
     rect(x, y, width, height);
   }
-  void step(){}
+  void step() {
+  }
   void stepUp() {
-   y += -5;
-    
+    y += -5;
   }
   void stepDown() {
- y += 5;
-}
+    println("7");
+    println(y);
+    y += 5;
+  }
 }

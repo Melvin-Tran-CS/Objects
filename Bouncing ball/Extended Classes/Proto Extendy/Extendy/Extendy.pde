@@ -9,15 +9,17 @@ public void setup() {
   Ahh.resize(1500, 1000);
   rectMode(CENTER); 
   createStuff();
+  
 }
 public void draw () {
   background(Ahh);
+
   for (int i = 0; i < shapes.size(); i++) {
     shapes.get(i).draw();
     shapes.get(i).step();
     
   }
-  PaddleMove();
+    PaddleMove();
 }
 
 abstract class Shape {
