@@ -25,10 +25,10 @@ class Ball extends Shape {
    
     x+= xSpeed;
     y+= ySpeed;
-    if (x-radius == paddle.x ) {
+    if (x+radius >paddle.x && y < paddle.y+paddleHeight && y > paddle.y ) {
       xSpeed *= -1;
     }
-    if (x+radius == peddle.x) {
+    if (x+radius < peddle.x && y < peddle.y+paddleHeight && y > peddle.y ) {
       xSpeed *= -1;
     }
     if (y > 1000) {

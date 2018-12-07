@@ -19,7 +19,7 @@ public void setup() {
 }
 public void draw () {
   background(Ahh);
-
+ellipseMode(RADIUS);
   for (int i = 0; i < shapes.size(); i++) {
     shapes.get(i).draw();
     shapes.get(i).step();
